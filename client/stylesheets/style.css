@@ -7,6 +7,9 @@
   -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15); }
 
+.logicon {
+  padding-right: 3px;
+}
 body {
   background: #eee;
   color: #666666; }
@@ -52,7 +55,8 @@ body {
     -moz-transition: all 300ms 0ms ease-in;
     -o-transition: all 300ms 0ms ease-in;
     transition: all 300ms 0ms ease-in; }
-  .post .upvote {
+  .post .upvote,
+  .post .unvote {
     display: block;
     margin: 7px 12px 0 0;
     float: left; }

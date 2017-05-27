@@ -10,9 +10,9 @@ Template.postItem.helpers({
   upvotedClass: function() {
     var userId = Meteor.userId();
     if (userId && !_.include(this.upvoters, userId)) {
-      return 'btn-primary upvotable';
+      return 'upvote btn-primary upvotable glyphicon-thumbs-up';
     } else {
-      return 'disabled';
+      return 'unvote glyphicon-thumbs-down';
     }
   }
 });
@@ -21,5 +21,9 @@ Template.postItem.events({
   'click .upvote': function(e) {
     e.preventDefault();
     Meteor.call('upvote', this._id);
+  },
+  'click .unvote': function(e) {
+    e.preventDefault();
+    Meteor.call('unvote', this._id);
   }
 });
